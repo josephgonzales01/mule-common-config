@@ -1,4 +1,4 @@
-# Mule common config
+# Mule Parent config
 
 Mule application project may inherit from this parent Maven POM configuration. In 
 addition to some global settings and repository references, this config also 
