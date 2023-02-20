@@ -8,7 +8,8 @@
 	<artifactId>mule-common-config</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-	<name>mule-common-config</name>
+	<name>Mule Parent config</name>
+	<description>A Mule parent Maven config that contains common dependencies and plugins that can be inherited into a child Mule projects</description>
 
 	<properties>
 		<!-- Build properties -->
@@ -34,8 +35,8 @@
 		<munit-tools.version>2.3.13</munit-tools.version>
 		<munit-runner.version>2.3.13</munit-runner.version>
 
-		<!-- version update check -->
-		<!-- mvn versions:display-dependency-updates -->
+		<!-- Anypoint account constants -->
+		<anypoint.org.id>Your organizations id here</anypoint.org.id>
 
 	</properties>
 
@@ -166,5 +167,13 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>anypoint-exchange</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${anypoint.org.id}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 </project>
